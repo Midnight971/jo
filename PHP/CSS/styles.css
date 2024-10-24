@@ -1,0 +1,1231 @@
+
+/*logo jeux olympique*/
+/* Rendre l'image responsive */
+    img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*header*/
+.header {
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center; /* Aligne verticalement les éléments */
+  justify-content: space-between; /* Espacement entre le logo et les boutons */
+  flex-wrap: wrap; /* Permet aux boutons de passer à la ligne si l'espace est limité */
+  width: 100%;
+}
+
+.logo {
+  width: 80px; /* Largeur de l'image */
+  height: auto; /* Hauteur automatique pour garder les proportions */
+  border-radius: 5px;
+}
+
+.bouton-header {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  background-color: #4CAF50; /* Couleur du bouton */
+  color: white; /* Couleur du texte */
+  border: none;
+  padding: 10px 20px; /* Espacement à l'intérieur du bouton */
+  margin: 5px; /* Espacement entre les boutons */
+  cursor: pointer; /* Curseur en main */
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s; /* Transition pour l'effet au survol */
+}
+
+.btn:hover {
+  background-color: #45a049; /* Couleur au survol */
+}
+
+/*info de connexion nom prenom*/
+.user-info {
+  margin-left: 20px; /* Espacement à gauche */
+  font-weight: bold; /* Texte en gras */
+  color: white; /* Couleur du texte */
+}
+
+.user-name {
+  display: inline-block;
+  padding: 5px 10px; /* Espacement à l'intérieur */
+  background-color: #4CAF50; /* Couleur de fond */
+  border-radius: 5px; /* Coins arrondis */
+}
+
+
+@media (max-width: 600px) {
+  .navbar {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .btn {
+      flex: 1 1 100%; /* Chaque bouton prend toute la largeur sur petit écran */
+      margin: 5px 0; /* Espacement vertical entre les boutons */
+  }
+
+  .logo {
+      margin: 0 0 10px 0; /* Marges pour le petit écran */
+  }
+}
+
+
+
+/*body et image de fond*/
+body{
+    background-image: url('https://i.ibb.co/HY9t4rN/fond.jpg'); /* Remplace par le chemin de ton image */
+    background-size: cover; /* L'image couvre tout l'espace du corps */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Évite de répéter l'image */
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/*Accueil*/
+.main1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1500px; /* Fixe une largeur maximale pour un alignement uniforme */
+  min-height: 80vh; /* Assure une hauteur minimale pour toutes les pages */
+}
+
+.navbar {
+  display: flex;
+  align-items: center; /* Aligne verticalement les éléments */
+  justify-content: space-between; /* Centre les boutons */
+  flex-wrap: wrap; /* Permet aux boutons de passer à la ligne si l'espace est limité */
+}
+
+
+
+.btn {
+background-color: #4CAF50; /* Couleur du bouton */
+color: white; /* Couleur du texte */
+border: none;
+padding: 10px 20px; /* Espacement à l'intérieur du bouton */
+margin: 5px; /* Espacement entre les boutons */
+cursor: pointer; /* Curseur en main */
+border-radius: 5px; /* Coins arrondis */
+transition: background-color 0.3s; /* Transition pour l'effet au survol */
+}
+
+.btn:hover {
+background-color: #45a049; /* Couleur au survol */
+}
+
+@media (max-width: 600px) {
+.btn {
+    flex: 1 1 100%; /* Chaque bouton prend toute la largeur sur petit écran */
+    margin: 5px 0; /* Espacement vertical entre les boutons */
+}
+
+.logo {
+    margin: 0 0 10px 0; /* Marges pour le petit écran */
+}
+
+.fond {
+    width:100%; /* Largeur de l'image */
+    height: auto; /* Hauteur automatique pour garder les proportions */
+    align-items: center;
+}
+}
+
+/*partie principale pour toutes les autres page saufe l'accueil*/
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1600px; /* Fixe une largeur maximale pour un alignement uniforme */
+  min-height: 80vh; /* Assure une hauteur minimale pour toutes les pages */
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .main {
+      padding: 15px;
+  }
+}
+
+/*formulaire d'inscription*/
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 8% auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #2575fc;
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #2575fc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #1e62d0;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}
+
+/*Formulaire d'achat*/
+
+
+form#paiement {
+  background: #9cbc2c;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+form#paiement fieldset {
+  border: none;
+  margin-bottom: 10px;
+}
+
+form#paiement fieldset:last-of-type {
+  margin-bottom: 0;
+}
+
+form#paiement legend {
+  color: #384313;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  text-shadow: 0 1px 1px #c0d576;
+}
+
+form#paiement > fieldset > legend:before {
+  content: "Étape " counter(fieldsets) " : ";
+  counter-increment: fieldsets;
+}
+
+form#paiement fieldset fieldset legend {
+  color: #111111;
+  font-size: 13px;
+  font-weight: normal;
+  padding-bottom: 0;
+}
+
+form#paiement ol li {
+  background: #b9cf6a;
+  background: rgba(255,255,255,.3);
+  border-color: #e3ebc3;
+  border-color: rgba(255,255,255,.6);
+  border-style: solid;
+  border-width: 2px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  line-height: 30px;
+  list-style: none;
+  padding: 5px 10px;
+  margin-bottom: 2px;
+}
+
+form#paiement ol ol li {
+  background: none;
+  border: none;
+  float: left;
+}
+
+form#paiement label {
+  float: left;
+  font-size: 13px;
+  width: 110px;
+}
+
+form#paiement fieldset fieldset label {
+  background: none no-repeat left 50%;
+  line-height: 20px;
+  padding: 0 0 0 30px;
+  width: auto;
+}
+
+form#paiement label[for=visa] {
+  background-image: url(visa.gif);
+}
+
+form#paiement label[for=amex] {
+  background-image: url(amex.gif);
+}
+
+form#paiement label[for=mastercard] {
+  background-image: url(mastercard.gif);
+}
+
+form#paiement fieldset fieldset label:hover {
+  cursor: pointer;
+}
+
+form#paiement input:not([type=radio]),
+form#paiement textarea {
+  background: #ffffff;
+  border: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  font: italic 13px Georgia, "Times New Roman", Times, serif;
+  outline: none;
+  padding: 5px;
+  width: calc(100% - 120px);
+  box-sizing: border-box;
+}
+
+form#paiement input:not([type=submit]):focus,
+form#paiement textarea:focus {
+  background: #eaeaea;
+}
+
+form#paiement input[type=radio] {
+  float: left;
+  margin-right: 5px;
+}
+
+form#paiement button {
+  background: #384313;
+  border: none;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -khtml-border-radius: 20px;
+  border-radius: 20px;
+  color: #ffffff;
+  display: block;
+  font: 18px Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 1px;
+  margin: auto;
+  padding: 7px 25px;
+  text-shadow: 0 1px 1px #000000;
+  text-transform: uppercase;
+}
+
+form#paiement button:hover {
+  background: #1e2506;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  form#paiement {
+      padding: 15px;
+  }
+
+  form#paiement legend {
+      font-size: 14px;
+  }
+
+  form#paiement label {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 5px;
+  }
+
+  form#paiement input:not([type=radio]),
+  form#paiement textarea {
+      width: 100%;
+  }
+
+  form#paiement button {
+      font-size: 16px;
+      padding: 10px 20px;
+  }
+}
+
+
+
+/*page de connexion*/
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 14px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #2575fc;
+  outline: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #2575fc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #1e62d0;
+}
+
+@media (max-width: 600px) {
+  .container {
+      padding: 20px;
+  }
+
+  h2 {
+      font-size: 20px;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+      font-size: 14px;
+  }
+
+  button[type="submit"] {
+      font-size: 14px;
+  }
+}
+
+/*Page offre*/
+
+/* Style global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+
+/* Section des offres */
+.offers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  
+}
+
+/* Style des boutons images */
+.ticket-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  text-decoration: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ticket-button img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ticket-button:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay avec le texte */
+
+
+.ticket-button:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.overlay .price {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Pied de page */
+.footer {
+  text-align: center;
+
+  background-color: #333;
+  color: white;
+ 
+  max-width: 100%;
+}
+
+.footer p {
+  font-size: 0.9rem;
+}
+
+/* === Responsivité === */
+
+/* Pour les écrans larges (ordinateur de bureau) */
+@media (min-width: 1024px) {
+  .offers {
+      justify-content: space-between;
+      padding: 2rem 5rem;
+  }
+}
+
+/* Pour les tablettes (écrans moyens) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .offers {
+      justify-content: center;
+  }
+
+  .ticket-button {
+      max-width: 300px;
+  }
+}
+
+/* Pour les petits écrans (mobiles) */
+@media (max-width: 767px) {
+  .header h1 {
+      font-size: 2rem;
+  }
+
+  .header p {
+      font-size: 1rem;
+  }
+
+  .offers {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .ticket-button {
+      max-width: 100%;
+  }
+}
+
+.offres{
+  min-height: 77vh;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Style des sections du footer */
+.footer-section {
+  flex: 1;
+  margin: 1rem;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #4CAF50;
+}
+
+.footer-section p, .footer-section a {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+.footer-section a:hover {
+  color: #4CAF50;
+  text-decoration: underline;
+}
+
+/* Liste des liens rapides */
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+  }
+
+  .footer-section {
+      margin: 1rem 0;
+  }
+}
+
+
+/*Mon panier*/
+
+
+/*panier-bouton*/
+.panier-btn {
+  display: flex;              /* Utilisez flexbox pour aligner l'image et le texte */
+  align-items: center;        /* Centrer verticalement l'image et le texte */
+}
+
+.icon-panier {
+  height: 24px;               /* Taille de l'image ajustée */
+  width: 24px;                /* Largeur de l'image ajustée */
+  margin-right: 8px;          /* Espace entre l'image et le texte */
+}
+
+.cart-count {
+  margin-left: 4px;           /* Espace entre "Panier" et le nombre d'articles */
+}
+
+
+.panier {
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 1rem;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-details h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.cart-item-details p {
+  margin: 0.5rem 0;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.quantity-btn:hover {
+  background-color: #555;
+}
+
+.quantity input {
+  width: 40px;
+  text-align: center;
+  margin: 0 0.5rem;
+}
+
+.remove-btn {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.remove-btn:hover {
+  background-color: #cc0000;
+}
+
+.cart-summary {
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+}
+
+.cart-summary h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.cart-summary p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.checkout-btn {
+  background-color: #226ddd;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.checkout-btn:hover {
+  background-color: #218838;
+}
+
+
+
+@media (max-width: 600px) {
+  .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .cart-item img {
+      margin-right: 0;
+      margin-bottom: 1rem;
+  }
+
+  .cart-item-details {
+      width: 100%;
+  }
+
+  .remove-btn {
+      align-self: flex-end;
+  }
+}
+
+
+
+  /*inscription et connexion validé */
+
+  .success-message {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.message-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.message-content h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #19b919;
+}
+
+.message-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.message-content .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.message-content .button:hover {
+    background-color: #0056b3;
+}
+
+.message-image img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+
+/*page admin-jo*/
+
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+btn-admin {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+
+/*ticket partie Administrateur et partie Offre particulier*/
+
+
+/*ticket*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+.ticket {
+	display: flex;
+	background: white;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.left {
+	display: flex;
+}
+
+.image {
+	height: 100%;
+	width: 170px;
+	background-image: url("https://i.ibb.co/jvyqXyT/logo.png");
+	background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+	opacity: 0.85;
+}
+
+.admit-one {
+	position: absolute;
+	color: darkgray;
+	height: 200px;
+	padding: 0 10px;
+	letter-spacing: 0.15em;
+	display: flex;
+	text-align: center;
+	justify-content: space-around;
+	writing-mode: vertical-rl;
+	transform: rotate(-180deg);
+  font-size: 10px;
+}
+
+.admit-one span:nth-child(2) {
+	color: white;
+	font-weight: 700;
+}
+
+.left .ticket-number {
+	height: 170px;
+	width: 170px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	padding: 5px;
+}
+
+.ticket-info {
+	padding: 10px 10px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+  background: linear-gradient(to right, #0e0c9c, #0f0c09);
+	align-items: center;
+}
+
+.date {
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+	padding: 5px 0;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+  border-width: 3px;
+  width: 200px;
+}
+
+.date span {
+	width: 100px;
+  color: white;
+}
+
+.date span:first-child {
+	text-align: left;
+}
+
+.date span:last-child {
+	text-align: right;
+}
+
+.date .june-29 {
+	color: #c7eb2a;
+	font-size: 20px;
+}
+
+.show-name {
+	font-size: 28px;
+	font-family: "Nanum Pen Script", cursive;
+	margin-top: 28px;
+  width: 235px;
+}
+
+.show-name h1 {
+	font-size: 28px;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	color: #ffffff;
+}
+
+.time {
+	padding: 10px 0;
+	color: #4a437e;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	font-weight: 600;
+  font-size: 15px;
+}
+
+.time span {
+	font-weight: 400;
+	color: gray;
+}
+
+.left .time {
+	font-size: 16px;
+}
+
+
+.location {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	padding-top: 8px;
+	border-top: 1px solid gray;
+}
+
+.location .separator {
+	font-size: 20px;
+}
+
+.right {
+	width: 150px;
+	border-left: 1px dashed #404040;
+  position: relative;
+}
+
+.right .admit-one {
+	color: darkgray;
+  top: 0;
+  left:0;
+  font-size: 10px;
+
+}
+
+.right .admit-one span:nth-child(2) {
+	color: gray;
+}
+
+.right .right-info-container {
+	height: 200px;
+	padding: 10px 10px 10px 35px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+  
+}
+
+.time p{
+  margin: 0;
+
+}
+
+.right .show-name h1 {
+	font-size: 18px;
+}
+
+.barcode {
+	height: 100px;
+}
+
+.barcode img {
+	height: 100%;
+}
+
+.right .ticket-number {
+	color: gray;
+}
+
+/*modifier les boutons des tickets*/
+.modifier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  background: linear-gradient(to right, #370ada, #fffffe);
+}
+
+.modifier button {
+  margin: 5px 0; /* Ajoutez une marge pour espacer les boutons entre eux */
+  font-size: 16px; /* Ajustez la taille de la police */
+  cursor: pointer; /* Changez le curseur en pointeur */
+}
+
+
+/*bouton Ajouter au panier dans la page offre*/
+
+.ajout-panier {
+  display: flex;                 /* Utilise flexbox */
+  justify-content: center;       /* Centre horizontalement */
+  align-items: center;           /* Centre verticalement */
+  width: 100%;                   /* Prend toute la largeur */
+  margin-top: 20px;              /* Un peu d'espace en haut si nécessaire */
+}
+
+.ajout-panier button {
+  width: 80px;                  /* Largeur du bouton */
+  height: 40px;                  /* Hauteur du bouton */
+  background-color: #007bff;     /* Couleur de fond du bouton (Bootstrap Primary) */
+  color: white;                  /* Couleur du texte */
+  border: none;                  /* Supprime la bordure */
+  border-radius: 5px;            /* Arrondis les coins */
+  font-size: 1rem;               /* Taille de la police */
+  transition: background-color 0.3s ease; /* Animation de transition */
+}
+
+/* Bouton hover effect */
+.ajout-panier button:hover {
+  background-color: #0056b3;    /* Change la couleur au survol */
+  cursor: pointer;              /* Pointeur en forme de main */
+}
+
+
+/*animation java script*/
+/* .circle{
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    aspect-ratio: 1/1;
+    background: rgb(14, 221, 14);
+    box-shadow: 0 0 10px rgb(143, 224, 20),
+        0 0 20px green,
+        0 0 30px green,
+        0 0 50px green;
+    border-radius: 50%;
+    animation: animate 5s linear forwards;
+
+}
+@keyframes animate
+{
+    0%
+{
+    transform: translateY(0);
+    opacity: 1;
+}
+50%
+{
+    opacity: 1;
+}
+100%
+{
+    transform: translateY(-100vh);
+    opacity: 0;
+}   
+
+}
+.circle::before{
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 25%;
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(green,transparent);
+} */
